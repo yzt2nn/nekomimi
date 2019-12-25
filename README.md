@@ -17,6 +17,6 @@
 ### 执行
 1、 确保已经安装了Deno，Deno的安装参照[官网](https://deno.land/)
 
-2、 进入nekomimi根目录，执行 deno --allow-run nekomimi.ts
+2、 进入nekomimi根目录，执行 deno --allow-run --allow-read nekomimi.ts
 
-如果提示权限不足，请尝试在前面加上sudo，如：sudo deno --allow-run nekomimi.ts
+如果提示权限不足，请尝试在前面加上sudo，如：sudo deno --allow-run --allow-read nekomimi.ts
