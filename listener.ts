@@ -47,6 +47,7 @@ async function saveFileToMap(path: string = ""): Promise<string> {
 
 async function check() {
   await saveFileToMap();
+  setTimeout(check, config.checkInterval);
 }
 
 export default function start() {
@@ -55,5 +56,5 @@ export default function start() {
     console.log(`[RELOAD] Execute command: ${config.cmd}`);
     process = Deno.run({ args: config.cmd.split(" ") });
   }
-  setInterval(check, config.checkInterval);
+  check();
 }
